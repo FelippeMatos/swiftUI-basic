@@ -9,13 +9,24 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            Text("Welcome to my first app!")
+                .fontWeight(.heavy)
+                .foregroundColor(.gray)
+                .padding()
+            Button(action: {
+                print("Button pressed!")
+            }) {
+                Text("Hit me!")
+            }
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .previewLayout(.device)
+            
     }
 }
